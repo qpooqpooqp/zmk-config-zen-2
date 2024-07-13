@@ -46,61 +46,44 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB        &kp Q  &kp W      &kp E           &kp R         &kp T          &kp Y          &kp U            &kp I      &kp O      &kp P     &td0
-&kp BACKSPACE  &kp A  &kp LC(S)  &kp LS(D)       &kp LA(F)     &kp G          &kp H          &kp LA(J)        &kp LS(K)  &kp LC(L)  &kp SEMI  &kp SQT
-&s9            &kp Z  &kp X      &kp C           &kp V         &kp B          &kp N          &kp M            &kp COMMA  &kp DOT    &kp FSLH  &kp ESCAPE
-                                 &lt 3 LEFT_GUI  &lt 2 DELETE  &lt 1 SPACE    &kp LC(ENTER)  &lt 4 BACKSPACE  &kp RALT
+&kp LSHFT  &kp Q           &kp W        &kp E        &kp R            &kp T        &kp Y          &kp U           &kp I        &kp O        &kp P       &none
+&none      &mt A LEFT_GUI  &mt LCTRL S  &mt LSHFT D  &mt LEFT_ALT F   &kp G        &kp H          &mt LEFT_ALT J  &mt LSHFT K  &mt LCTRL L  &lt 1 SEMI  &kp SQT
+&none      &kp Z           &kp X        &kp C        &kp V            &kp B        &kp N          &kp M           &kp COMMA    &kp DOT      &kp FSLH    &none
+                                        &lt 3 ESC    &lt 2 BACKSPACE  &lt 1 TAB    &kp LC(ENTER)  &lt 1 SPACE     &kp DELETE
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &kp INS   &kp PG_DN  &kp UP    &kp PG_UP  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans     &trans    &trans     &trans   &trans
-                        &trans  &trans  &trans    &trans    &trans     &trans
+&none  &none      &none      &none      &none      &none        &kp PAGE_UP    &kp HOME  &kp UP    &kp END    &kp INSERT  &none
+&none  &none      &none      &none      &none      &none        &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &trans      &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(Y)    &none          &none     &none     &kp CAPS   &none       &none
+                             &trans     &trans     &trans       &trans         &trans    &trans
             >;
 
-            label = "control";
+            label = "CONTROL";
         };
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans             &trans  &kp N7  &kp N8  &kp N9  &kp MINUS  &kp STAR
-&trans  &trans  &trans  &trans  &trans          &trans             &trans  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp FSLH
-&trans  &trans  &trans  &trans  &rgb_ug RGB_ON  &rgb_ug RGB_OFF    &kp N0  &kp N1  &kp N2  &kp N3  &kp DOT    &trans
-                        &trans  &trans          &trans             &trans  &trans  &trans
+&trans  &kp LC(Q)  &kp LC(W)  &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &kp LC(T)    &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT   &trans
+&trans  &kp LC(A)  &kp LC(S)  &kp LC(D)       &kp LC(F)        &kp LC(G)    &kp EQUAL  &kp N4  &kp N5   &kp N6  &kp SEMI   &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)       &kp LC(V)        &kp LC(Y)    &kp BSLH   &kp N1  &kp N2   &kp N3  &kp GRAVE  &trans
+                              &trans          &trans           &trans       &kp MINUS  &kp N0  &kp DOT
             >;
 
-            label = "number";
+            label = "NUMBER";
         };
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F10  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F12  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &none     &none      &none      &none     &none     &kp PRINTSCREEN  &kp F7     &kp F8  &kp F9  &kp F12  &none
+&none  &kp LGUI  &kp LCTRL  &kp LSHFT  &kp LALT  &none     &kp SCROLLLOCK   &kp F4     &kp F5  &kp F6  &kp F11  &none
+&none  &none     &kp RALT   &none      &none     &none     &none            &kp F1     &kp F2  &kp F3  &kp F10  &none
+                            &trans     &trans    &trans    &kp TAB          &kp SPACE  &trans
             >;
 
-            label = "fn";
-        };
-
-        layer_4 {
-            display-name = "SYMBOL";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&trans  &kp EXCL   &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&trans  &kp GRAVE  &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &trans
-&trans  &kp TILDE  &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
-                           &trans    &trans    &trans       &trans     &trans     &trans
-            >;
+            label = "FN";
         };
     };
 };
